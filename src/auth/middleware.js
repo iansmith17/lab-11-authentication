@@ -14,6 +14,7 @@ module.exports = (req, res, next) => {
       case 'basic':
         return _authBasic(encodedString);
       default:
+        console.log(authType.toLowerCase());
         return _authError();
     }
 

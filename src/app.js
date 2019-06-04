@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 // Catchalls
+app.use(authRouter);
 app.use(notFound);
 app.use(errorHandler);
 
